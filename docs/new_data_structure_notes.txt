@@ -1,0 +1,43 @@
+# Prototype for the data structure used in gthemer.
+# Each value in the styles defaults to None, meaning that it won't be included
+# in the xml file.
+
+{
+	"_globals": { # Global settings for gtksourceview
+		"text": {},
+  		"selection": {},
+  		"cursor": {},
+  		"current-line": {},
+		"line-numbers": {},
+		"draw-spaces": {},
+		"bracket-match": {},
+ 		"bracket-mismatch": {},
+		"right-margin": {},
+		"search-match": {}		
+	},
+	"python": { # The style name.
+		"name": "Python", # The display name text.
+		"scheme": "python"
+		"styles": { # Styles go here.
+			"boolean": {
+				"foreground": "",
+				"background": "",
+				"underline": False,
+				"strikethrough": False,
+				"italic": False,
+				"bold": False,
+			},
+			"complex": {
+				...
+				...
+			},			
+		},
+	}
+}
+
+
+
+# Each style along will all of its properties need to be added to a row in a
+# TreeView as well...
+
+Use a named tuple-dict abstraction that hides the row structure.

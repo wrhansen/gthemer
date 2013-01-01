@@ -1,0 +1,18 @@
+#!/usr/bin/python
+#encoding: utf-8
+'''
+Run the gthemer application.
+'''
+import os
+from gi.repository import Gtk
+
+
+from lib import MainWindow
+
+ui_file = "ui/main_window.glade"
+
+if __name__ == '__main__':
+	os.chdir(os.path.dirname(os.path.abspath(__file__)))
+	window = MainWindow(ui_file)
+	window.initialize_app()
+	Gtk.main()

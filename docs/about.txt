@@ -1,0 +1,27 @@
+=======
+GThemer
+=======
+
+What Does This Application Do?
+------------------------------
+
+	This application allows you to create a custom color
+	scheme for applications that use GtkSourceView (gedit).
+	This application allows for you to create color schemes
+	through	use of a simple graphical user interface that
+	allows for you to select individual languages or styles
+	and customize as you wish.
+	
+	GThemer saves your custom theme to the format that
+	GtkSourceView expects (xml). With this theme file 
+	you can	then add it to the theme manager in your
+	favorite GtkSourceView application for use in that
+	application!
+
+How To
+------
+
+
+If you have any questions or comments feel free to
+message me:
+	Wesley Hansen<wesrhansen@gmail.com>

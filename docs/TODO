@@ -1,0 +1,23 @@
+This document lists all the things I have yet to do or intend to do for 
+the gthemer project:
+
+4) Package it up
+	a) Release source on github
+	b) Figure out how to package it for aptitude
+		I) Goal is to release it for Ubuntu Software Center
+		
+		
+
+
+GUI
+	- TreeView with editable cells
+		- Color chooser
+		- Pixbuf check marks for the bool cells
+		- Changing a cell gives that row the formatting
+
+	- Open existing xml file.
+		- Correctly populate the treeview
+			- Which means the sourceview_styles object should
+			  be able to be created from an xml file.
+
+
