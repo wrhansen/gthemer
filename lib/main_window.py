@@ -1,4 +1,18 @@
 #encoding: utf-8
+#    This file is part of GThemer.
+#
+#    GThemer is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    GThemer is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 """
  GThemer MainWindow -- The GUI main window for the GThemer application
  
@@ -12,6 +26,7 @@ __status__ = "Prototype"
 __application__ = "GThemer" + __version__
 
 import pprint
+import os
 
 from gi.repository import Gtk, Gdk, Pango
 from lxml import etree
@@ -22,6 +37,7 @@ from lib.stylesdb import GThemerDB
 
 __about_dialog__ = "ui/about_dialog.glade"
 __about_file__ = "docs/about.txt"
+__db_path__ = os.path.expanduser('~/.gthemer/default.db')
 
 class MainWindow():
 	'''
@@ -38,10 +54,14 @@ class MainWindow():
 		'''
 		Load the gui elements from the builder
 		'''
+		
 		self.window = self.builder.get_object("main_window")
 		self.window.set_title(__application__)
 		self.window.show_all()
-		self.sourceview_styles = GThemerDB('default.db')
+		
+		if not os.path.exists(os.path.expanduser('~/.gthemer/')):
+			os.makedirs(os.path.expanduser('~/.gthemer/'))
+		self.sourceview_styles = GThemerDB(__db_path__)
 		# Generate language_combo
 		self.language_combo = self.builder.get_object("language_combo")
 		self.language_combo.set_model(None)

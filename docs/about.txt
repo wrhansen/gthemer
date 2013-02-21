@@ -21,7 +21,93 @@ What Does This Application Do?
 How To
 ------
 
+	When GThemer starts, you see an empty template that
+	you can use to create your custom theme. To start,
+	be sure to fill in the descriptive information about
+	your theme, including Name, ID, Author, and Description.
+	
+	The Theme window, located in the bottom portion of the
+	application, displays all of the languages and styles
+	that you've chosen to customize. By default, you see
+	"Global gedit Settings" in the Theme window. This 
+	definition contains styles for some defaults in
+	gedit. It is strongly suggested that you define
+	the styles listed in that definition as they'll
+	serve as a failback to any language/styles that
+	you choose not to define.
+	
+	To add a language and all of its styles to
+	the Theme window, simple click on the Language
+	selector, choose a language, and then click the
+	"Add Lang" button. At this point you will see
+	The language you selected show up in the Theme
+	window.
+	
+	To create custom themes for the definitions
+	listed in the Theme window, simply click on the
+	arrow next to the defintion to expand it and
+	display all of the styles.
+	
+	Instead, if you wanted to add only certain styles
+	to the Theme window for a given language, using
+	the Language selector, choose a language. Then
+	click on the Style selector to see a list of all
+	the styles that Language contains. Select a style
+	and click "Add Style". You'll see the language
+	of the style you added show up in the Theme
+	window (if it wasn't already there to begin with)
+	And if you expand the language, you'll see
+	the style you selected there.
+	
+	To define your custom theme for a given style,
+	follow your mouse across the row the style is
+	located in Theme window and click on the
+	section of the row under the property that
+	you wish to change. If you click under the
+	"Foreground" or "Background" columns, a color
+	chooser dialog will open and ask you to select
+	the color you wish to set for that property.
+	If you click under the "Bold", "Italic", 
+	"Underline" or "Strikethrough" columns,
+	you'll see a check mark appear in that column.
+	To un-toggle those properties, simply click on
+	the checkmark again.
+	
+	To delete styles, languages, or clear them, simply
+	right click on the language or style you want
+	to perform an action on and select the appropriate
+	action from the popup menu.
+	
+	When you're all finished customizing your
+	custom themes, you can save it to file by
+	clicking "Save" or "Save As" from the File menu.
+	
+	You can open existing themes you've created
+	and saved by clicked "Open" from the File menu.
+
+How To Use Your Custom Theme In gedit
+-------------------------------------
+
+	In gedit, click Edit|Preferences in the menu.
+	Select the tab "Fonts & Colors". Below the
+	window labeled "Color Schemes" select the 
+	add("+") button and then find your custom
+	theme file using the file chooser dialog.
+	Your theme should show up in the "Color Schemes"
+	window, with the Name that you gave it in
+	GThemer. Select it and you'll see that gedit
+	applied your theme!
+
+Hints
+-----
+
+	* It is strongly recommended that you fill out
+	the styles listed under "Global gedit Settings"
+	as well as adding the styles from "Default".
+	Combined, these definitions will serve as a nice
+	fallback for languages and styles you decided
+	not to explicitly define.
 
 If you have any questions or comments feel free to
 message me:
-	Wesley Hansen<wesrhansen@gmail.com>
+	Wesley Hansen <wesrhansen@gmail.com>
